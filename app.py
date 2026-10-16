@@ -156,6 +156,23 @@ def init_db():
     conn.commit()
     conn.close()
 
+    # Garantir que o efetivo do CFIS 2026 esteja carregado
+    try:
+        conn = get_db()
+        cursor = conn.cursor()
+        cursor.execute("SELECT id FROM usuarios WHERE matricula = '193010'")
+        if not cursor.fetchone():
+            conn.close()
+            from cadastrar_efetivo_cfis import seed_cfis
+            seed_cfis()
+        else:
+            conn.close()
+    except Exception as e:
+        print("Aviso:", e)
+
+# Inicializar banco de dados ao carregar aplicacao
+init_db()
+
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
@@ -759,5 +776,5 @@ if __name__ == '__main__':
     print(f"[*] Acesso Local:     http://localhost:5000")
     print(f"[*] Acesso na Rede:   http://{ip}:5000")
     print("[*] Login Padrao:     Matricula: admin  |  PIN: 193")
-    print("=" * 65)
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
