@@ -28,7 +28,7 @@ def seed_cfis():
             'setor_subunidade': 'Centro de Fiscalização (CFIS)',
             'papel': 'gestor',
             'turma': '7ª',
-            'exercicio': '2025/2026',
+            'exercicio': '2026',
             'parcelas': [
                 {'parcela': 1, 'total_parcelas': 1, 'data_inicio': '2026-07-01', 'dias': 30, 'data_fim': '2026-07-30', 'data_retorno': '2026-07-31', 'status': 'homologado', 'obs': '7ª Turma de Férias 2026'}
             ],
@@ -42,7 +42,7 @@ def seed_cfis():
             'setor_subunidade': 'Centro de Fiscalização (CFIS)',
             'papel': 'militar',
             'turma': '6ª',
-            'exercicio': '2025/2026',
+            'exercicio': '2026',
             'parcelas': [
                 {'parcela': 1, 'total_parcelas': 2, 'data_inicio': '2026-05-01', 'dias': 15, 'data_fim': '2026-05-15', 'data_retorno': '2026-05-16', 'status': 'homologado', 'obs': '1ª Parcela (Maio/2026)'},
                 {'parcela': 2, 'total_parcelas': 2, 'data_inicio': '2026-11-16', 'dias': 15, 'data_fim': '2026-11-30', 'data_retorno': '2026-12-01', 'status': 'reaprazado', 'obs': '2ª Parcela reaprazada - Proc. SEI 088100860.01256/2025-10'}
@@ -68,7 +68,7 @@ def seed_cfis():
             'setor_subunidade': 'Centro de Fiscalização (CFIS)',
             'papel': 'militar',
             'turma': '2ª',
-            'exercicio': '2025/2026',
+            'exercicio': '2026',
             'parcelas': [
                 {'parcela': 1, 'total_parcelas': 1, 'data_inicio': '2026-01-05', 'dias': 30, 'data_fim': '2026-02-03', 'data_retorno': '2026-02-04', 'status': 'homologado', 'obs': '2ª Turma de Férias 2026'}
             ],
@@ -82,7 +82,7 @@ def seed_cfis():
             'setor_subunidade': 'Centro de Fiscalização (CFIS)',
             'papel': 'militar',
             'turma': '6ª',
-            'exercicio': '2025/2026',
+            'exercicio': '2026',
             'parcelas': [
                 {'parcela': 1, 'total_parcelas': 3, 'data_inicio': '2026-02-18', 'dias': 10, 'data_fim': '2026-02-27', 'data_retorno': '2026-02-28', 'status': 'reaprazado', 'obs': '1ª Parcela reaprazada (Fevereiro)'},
                 {'parcela': 2, 'total_parcelas': 3, 'data_inicio': '2026-04-22', 'dias': 10, 'data_fim': '2026-05-01', 'data_retorno': '2026-05-02', 'status': 'reaprazado', 'obs': '2ª Parcela reaprazada (Abril/Maio)'},
@@ -129,7 +129,7 @@ def seed_cfis():
             'setor_subunidade': 'Centro de Fiscalização (CFIS)',
             'papel': 'militar',
             'turma': '2ª',
-            'exercicio': '2025/2026',
+            'exercicio': '2026',
             'parcelas': [
                 {'parcela': 1, 'total_parcelas': 1, 'data_inicio': '2026-01-05', 'dias': 30, 'data_fim': '2026-02-03', 'data_retorno': '2026-02-04', 'status': 'homologado', 'obs': '2ª Turma de Férias 2026'}
             ],
@@ -143,7 +143,7 @@ def seed_cfis():
             'setor_subunidade': 'Centro de Fiscalização (CFIS)',
             'papel': 'militar',
             'turma': '3ª',
-            'exercicio': '2025/2026',
+            'exercicio': '2026',
             'parcelas': [
                 {'parcela': 1, 'total_parcelas': 2, 'data_inicio': '2026-07-08', 'dias': 20, 'data_fim': '2026-07-27', 'data_retorno': '2026-07-28', 'status': 'reaprazado', 'obs': '1ª Parcela reaprazada (20 dias) - Proc. SEI 08810142.000181/2026-19'},
                 {'parcela': 2, 'total_parcelas': 2, 'data_inicio': '2026-08-19', 'dias': 10, 'data_fim': '2026-08-28', 'data_retorno': '2026-08-29', 'status': 'reaprazado', 'obs': '2ª Parcela reaprazada (10 dias) - Proc. SEI 08810142.000181/2026-19'}
@@ -179,7 +179,7 @@ def seed_cfis():
             'setor_subunidade': 'Centro de Fiscalização (CFIS)',
             'papel': 'militar',
             'turma': '1ª',
-            'exercicio': '2025/2026',
+            'exercicio': '2026',
             'parcelas': [
                 {'parcela': 1, 'total_parcelas': 3, 'data_inicio': '2026-03-09', 'dias': 10, 'data_fim': '2026-03-18', 'data_retorno': '2026-03-19', 'status': 'reaprazado', 'obs': '1ª Parcela reaprazada (Março/2026)'},
                 {'parcela': 2, 'total_parcelas': 3, 'data_inicio': '2026-06-15', 'dias': 10, 'data_fim': '2026-06-24', 'data_retorno': '2026-06-25', 'status': 'reaprazado', 'obs': '2ª Parcela reaprazada (Junho/2026)'},
@@ -226,7 +226,7 @@ def seed_cfis():
             'setor_subunidade': 'Centro de Fiscalização (CFIS)',
             'papel': 'militar',
             'turma': '2ª',
-            'exercicio': '2025/2026',
+            'exercicio': '2026',
             'parcelas': [
                 {'parcela': 1, 'total_parcelas': 2, 'data_inicio': '2026-07-01', 'dias': 20, 'data_fim': '2026-07-20', 'data_retorno': '2026-07-21', 'status': 'reaprazado', 'obs': '1ª Parcela reaprazada (20 dias - Julho)'},
                 {'parcela': 2, 'total_parcelas': 2, 'data_inicio': '2026-12-09', 'dias': 10, 'data_fim': '2026-12-18', 'data_retorno': '2026-12-19', 'status': 'reaprazado', 'obs': '2ª Parcela reaprazada (10 dias - Dezembro)'}
@@ -262,7 +262,7 @@ def seed_cfis():
             'setor_subunidade': 'Centro de Fiscalização (CFIS)',
             'papel': 'militar',
             'turma': '7ª',
-            'exercicio': '2025/2026',
+            'exercicio': '2026',
             'parcelas': [
                 {'parcela': 1, 'total_parcelas': 1, 'data_inicio': '2026-07-01', 'dias': 30, 'data_fim': '2026-07-30', 'data_retorno': '2026-07-31', 'status': 'homologado', 'obs': '7ª Turma de Férias 2026'}
             ],
@@ -276,7 +276,7 @@ def seed_cfis():
             'setor_subunidade': 'Centro de Fiscalização (CFIS)',
             'papel': 'militar',
             'turma': '10ª',
-            'exercicio': '2025/2026',
+            'exercicio': '2026',
             'parcelas': [
                 {'parcela': 1, 'total_parcelas': 3, 'data_inicio': '2026-05-11', 'dias': 10, 'data_fim': '2026-05-20', 'data_retorno': '2026-05-21', 'status': 'reaprazado', 'obs': '1ª Parcela reaprazada - Proc. SEI 08810142.000536/2025-81'},
                 {'parcela': 2, 'total_parcelas': 3, 'data_inicio': '2026-09-14', 'dias': 10, 'data_fim': '2026-09-23', 'data_retorno': '2026-09-24', 'status': 'reaprazado', 'obs': '2ª Parcela reaprazada - Proc. SEI 08810142.000536/2025-81'},
@@ -313,7 +313,7 @@ def seed_cfis():
             'setor_subunidade': 'Centro de Fiscalização (CFIS)',
             'papel': 'militar',
             'turma': '9ª',
-            'exercicio': '2025/2026',
+            'exercicio': '2026',
             'parcelas': [
                 {'parcela': 1, 'total_parcelas': 1, 'data_inicio': '2026-09-09', 'dias': 30, 'data_fim': '2026-10-08', 'data_retorno': '2026-10-09', 'status': 'homologado', 'obs': '9ª Turma de Férias 2026'}
             ],
@@ -327,7 +327,7 @@ def seed_cfis():
             'setor_subunidade': 'Centro de Fiscalização (CFIS)',
             'papel': 'militar',
             'turma': '8ª',
-            'exercicio': '2025/2026',
+            'exercicio': '2026',
             'parcelas': [
                 {'parcela': 1, 'total_parcelas': 3, 'data_inicio': '2026-08-24', 'dias': 10, 'data_fim': '2026-09-02', 'data_retorno': '2026-09-03', 'status': 'reaprazado', 'obs': '1ª Parcela reaprazada (Agosto/2026)'},
                 {'parcela': 2, 'total_parcelas': 3, 'data_inicio': '2027-01-11', 'dias': 10, 'data_fim': '2027-01-20', 'data_retorno': '2027-01-21', 'status': 'reaprazado', 'obs': '2ª Parcela reaprazada (Janeiro/2027)'},
@@ -374,7 +374,7 @@ def seed_cfis():
             'setor_subunidade': 'Centro de Fiscalização (CFIS)',
             'papel': 'militar',
             'turma': '6ª',
-            'exercicio': '2025/2026',
+            'exercicio': '2026',
             'parcelas': [
                 {'parcela': 1, 'total_parcelas': 2, 'data_inicio': '2026-11-23', 'dias': 20, 'data_fim': '2026-12-12', 'data_retorno': '2026-12-13', 'status': 'reaprazado', 'obs': '1ª Parcela reaprazada (20 dias) - Proc. SEI 08810142.000765/2026-86'},
                 {'parcela': 2, 'total_parcelas': 2, 'data_inicio': '2027-04-06', 'dias': 10, 'data_fim': '2027-04-15', 'data_retorno': '2027-04-17', 'status': 'reaprazado', 'obs': '2ª Parcela reaprazada (10 dias) + 1 dia compensação Desfile Cívico em 16/04/2027'}

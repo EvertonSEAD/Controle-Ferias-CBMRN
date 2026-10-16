@@ -122,8 +122,8 @@ def init_db():
             """, (mat, nome, guerra, posto, setor, default_pin, papel))
             uid = cursor.lastrowid
 
-            # Adicionar períodos aquisitivos padrão (2024/2025 e 2025/2026)
-            for ex in ['2024/2025', '2025/2026']:
+            # Adicionar períodos aquisitivos padrão (2025 e 2026)
+            for ex in ['2025', '2026']:
                 cursor.execute("""
                 INSERT INTO periodos_aquisitivos (usuario_id, exercicio, total_dias, dias_utilizados)
                 VALUES (?, ?, 30, 0)
@@ -132,7 +132,7 @@ def init_db():
         # Adicionar agendamento prévio com 2 parcelas (15 e 15 dias) para o Sgt. Silva como demonstração
         cursor.execute("SELECT id FROM usuarios WHERE matricula = '193003'")
         sgt_id = cursor.fetchone()[0]
-        cursor.execute("SELECT id FROM periodos_aquisitivos WHERE usuario_id = ? AND exercicio = '2024/2025'", (sgt_id,))
+        cursor.execute("SELECT id FROM periodos_aquisitivos WHERE usuario_id = ? AND exercicio = '2025'", (sgt_id,))
         p_id = cursor.fetchone()[0]
 
         d_ini1 = "2026-11-03"
@@ -152,6 +152,12 @@ def init_db():
         """, (sgt_id, p_id, d_ini2, d_fim2, d_ret2))
 
         cursor.execute("UPDATE periodos_aquisitivos SET dias_utilizados = 30 WHERE id = ?", (p_id,))
+
+    # Migrar períodos anteriores para formato somente com o ano (ex: 2025/2026 -> 2026)
+    try:
+        cursor.execute("UPDATE periodos_aquisitivos SET exercicio = substr(exercicio, -4) WHERE exercicio LIKE '%/%'")
+    except Exception:
+        pass
 
     conn.commit()
     conn.close()
@@ -354,9 +360,9 @@ def api_criar_usuario():
     """, (matricula, nome_completo, nome_guerra, posto_graduacao, setor_subunidade, pin_hash, papel))
     novo_id = cursor.lastrowid
 
-    # Criar período aquisitivo atual automaticamente
+    # Criar período aquisitivo atual automaticamente (apenas o ano, ex: 2026)
     ano_atual = dt.now().year
-    exercicio_padrao = f"{ano_atual}/{ano_atual + 1}"
+    exercicio_padrao = str(ano_atual)
     cursor.execute("""
     INSERT INTO periodos_aquisitivos (usuario_id, exercicio, total_dias, dias_utilizados)
     VALUES (?, ?, 30, 0)
@@ -401,7 +407,7 @@ def api_criar_periodo():
         return jsonify({'erro': 'Permissão negada.'}), 403
 
     if not exercicio:
-        return jsonify({'erro': 'O exercício do período aquisitivo é obrigatório (ex: 2025/2026).'}), 400
+        return jsonify({'erro': 'O ano do período aquisitivo é obrigatório (ex: 2026).'}), 400
 
     conn = get_db()
     cursor = conn.cursor()
